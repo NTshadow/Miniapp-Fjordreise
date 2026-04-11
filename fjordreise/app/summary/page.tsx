@@ -52,15 +52,14 @@ export default function Summary() {
     return (
         <main className="min-h-screen bg-gray-50">
             <header className="bg-white border-b border-gray-100 px-4 py-4">
-                <div className="max-w-2xl mx-auto">
-                    <h1 className="text-2xl font-bold text-blue-700 tracking-tight">⛴ Fjordreise</h1>
+                <div className="max-w-2xl mx-auto text-center">
+                    <h1 className="text-2xl font-bold text-red-700 tracking-tight ">🚤Fjordreise</h1>
                 </div>
             </header>
 
             <div className="max-w-2xl mx-auto px-4 py-8 flex flex-col gap-6">
                 <div className="text-center py-4">
-                    <div className="text-5xl mb-3">✅</div>
-                    <h2 className="text-2xl font-bold text-gray-900">Reise bekreftet!</h2>
+                    <h2 className="text-2xl font-bold text-gray-900">Din reise:</h2>
                     <p className="text-sm text-gray-400 mt-1">
                         Bestillingsreferanse:{" "}
                         <span className="font-mono font-semibold text-gray-600">{bookingRef}</span>
@@ -104,7 +103,7 @@ export default function Summary() {
 
                         <hr className="border-gray-100" />
 
-                        <div className="grid grid-cols-2 gap-3 text-sm">
+                        <div className="grid grid-cols-2 gap-40 text-sm">
                             <div>
                                 <p className="text-gray-400 text-xs">Operatør</p>
                                 <p className="font-medium text-gray-700">{route.operator}</p>

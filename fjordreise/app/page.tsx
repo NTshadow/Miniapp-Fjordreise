@@ -53,8 +53,8 @@ export default function Home() {
     return (
         <main className="min-h-screen bg-gray-50">
             <header className="bg-white border-b border-gray-100 px-4 py-4">
-                <div className="max-w-3xl mx-auto">
-                    <h1 className="text-2xl font-bold text-red-700 tracking-tight">🚤Fjordreise</h1>
+                <div className="max-w-3xl mx-auto text-center">
+                    <h1 className="text-2xl font-bold text-red-700 tracking-tight ">🚤Fjordreise</h1>
                     <p className="text-gray-600 mt-1">Her kan du finne din neste ferjeavgang</p>
                 </div>
             </header>
@@ -75,7 +75,7 @@ export default function Home() {
                 />
 
                 {selected && (
-                    <div className="sticky bottom-4">
+                    <div className="bottom-4">
                         <button
                             onClick={handleCountinue}
                             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3.5 rounded-xl shadow-lg transition-colors text-sm"     

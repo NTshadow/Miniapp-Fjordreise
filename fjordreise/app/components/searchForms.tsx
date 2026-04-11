@@ -66,7 +66,7 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
                         name="date"
                         required
                         min={today}
-                        //defaultValue={today} vet ikke om jeg trenger den
+                        defaultValue={today}
                         className="border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                     />
                 </div>
