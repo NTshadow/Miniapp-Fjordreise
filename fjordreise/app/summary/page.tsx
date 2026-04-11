@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 import type { Route } from "../api/routes/route";    
@@ -46,14 +47,13 @@ export default function Summary() {
         return null;
     }
 
-    const bookingRef = `FJ-${route.id}-${Date.now().toString().slice(-4)}`;
-
+    const [bookingRef] = useState(() => `FJ-${route.id}-${Date.now().toString().slice(-4)}`);
 
     return (
         <main className="min-h-screen bg-gray-50">
             <header className="bg-white border-b border-gray-100 px-4 py-4">
                 <div className="max-w-2xl mx-auto text-center">
-                    <h1 className="text-2xl font-bold text-red-700 tracking-tight ">🚤Fjordreise</h1>
+                    <h1 className="text-2xl text-red-700 tracking-tight ">Fjordreise</h1>
                 </div>
             </header>
 
@@ -67,13 +67,13 @@ export default function Summary() {
                 </div>
 
                 <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-                    <div className="bg-blue-600 px-6 py-4">
-                        <p className="text-blue-100 text-xs font-semibold uppercase tracking-wide">Din reise</p>
+                    <div className="bg-[#D96666] px-6 py-4">
+                        <p className="text-black text-xs font-semibold uppercase tracking-wide">Din reise</p>
                         <p className="text-white text-xl font-bold mt-1">
                             {route.from} → {route.to}
                         </p>
                         {date && (
-                            <p className="text-blue-200 text-sm mt-0.5 capitalize">
+                            <p className="text-black text-sm mt-0.5 capitalize">
                                 {formatDate(date as string)}
                             </p>
                         )}
@@ -118,7 +118,7 @@ export default function Summary() {
 
                         <div className="flex items-center justify-between">
                             <p className="font-semibold text-gray-700">Totalpris</p>
-                            <p className="text-3xl font-bold text-blue-600">{route.priceNOK} kr</p>
+                            <p className="text-3xl font-bold text-[#B93B27]">{route.priceNOK} kr</p>
                         </div>
                     </div>
                 </div>

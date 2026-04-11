@@ -40,11 +40,11 @@ export default function RouteCards({ route, selected, onSelect, searchDate }: Ro
                 
             </div>
             <div className="flex flex-col items-end gap-1">
-                <div className="text-2xl font-bold text-blue-600">{route.priceNOK}kr</div>
+                <div className="text-2xl font-bold text-[#B93B27]">{route.priceNOK}kr</div>
                     <div
                         onClick={() => onSelect(route)}
-                        className={`mt-3 pt-1 border border-blue-500 text-s font-bold text-center cursor-pointer py-1 rounded w-full
-                            ${selected ? "bg-blue-300 text-blue-800" : "text-blue-600"
+                        className={`mt-3 pt-1 border border-[#D96666] text-s font-bold text-center cursor-pointer py-1 rounded w-full
+                            ${selected ? "bg-[#FEBFBF] text-black" : "text-black"
                             }`}
                     >
                     {selected ? "valgt" : "velg"}

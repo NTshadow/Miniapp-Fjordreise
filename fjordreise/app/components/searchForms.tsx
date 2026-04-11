@@ -33,7 +33,7 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
                         name="from"
                         required
                         defaultValue="Bergen"
-                         className="border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"   
+                         className="text-black border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-[#D96666] focus:outline-none"   
                     >
                         {PORTS.map((port) => (      
                             <option key={port} value={port}>
@@ -49,7 +49,7 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
                         name="to"
                         required
                         defaultValue="Stavanger"
-                        className="border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                        className="text-black border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-[#D96666] focus:outline-none"
                     >
                         {PORTS.map((port) => (
                             <option key={port} value={port}>
@@ -67,7 +67,7 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
                         required
                         min={today}
                         defaultValue={today}
-                        className="border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                        className="text-black border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-[#D96666] focus:outline-none"
                     />
                 </div>
             </div>  
@@ -75,7 +75,7 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
             <button
                 type="submit"
                 disabled={loading}
-                className="bg-blue-600 text-white rounded-md p-2 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="bg-[#B93B27] text-white rounded-md p-2 hover:bg-[#D96666] focus:outline-none focus:ring-2 focus:ring-[#762619]"
             >
                 {loading ? "Laster..." : "Søk"}
             </button>
