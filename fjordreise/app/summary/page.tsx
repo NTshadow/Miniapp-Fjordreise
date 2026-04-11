@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 import type { Route } from "../api/routes/route";    
@@ -47,26 +46,25 @@ export default function Summary() {
         return null;
     }
 
-    const [bookingRef] = useState(() => `FJ-${route.id}-${Date.now().toString().slice(-4)}`);
+    const bookingRef = `FJ-${route.id}-${route.priceNOK}`;
 
     return (
-        <main className="min-h-screen bg-gray-50">
-            <header className="bg-white border-b border-gray-100 px-4 py-4">
+        <main className="min-h-screen ">
                 <div className="max-w-2xl mx-auto text-center">
-                    <h1 className="text-2xl text-red-700 tracking-tight ">Fjordreise</h1>
+                    <h1 className="text-4xl pt-5 text-red-700 tracking-tight ">Fjordreise</h1>
                 </div>
-            </header>
+        
 
             <div className="max-w-2xl mx-auto px-4 py-8 flex flex-col gap-6">
                 <div className="text-center py-4">
                     <h2 className="text-2xl font-bold text-gray-900">Din reise:</h2>
-                    <p className="text-sm text-gray-400 mt-1">
+                    <p className="text-sm text-black mt-1">
                         Bestillingsreferanse:{" "}
-                        <span className="font-mono font-semibold text-gray-600">{bookingRef}</span>
+                        <span className="font-mono font-semibold text-black">{bookingRef}</span>
                     </p>
                 </div>
 
-                <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+                <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
                     <div className="bg-[#D96666] px-6 py-4">
                         <p className="text-black text-xs font-semibold uppercase tracking-wide">Din reise</p>
                         <p className="text-white text-xl font-bold mt-1">
@@ -109,8 +107,8 @@ export default function Summary() {
                                 <p className="font-medium text-gray-700">{route.operator}</p>
                             </div>
                             <div>
-                                <p className="text-gray-400 text-xs">Varighet</p>
-                                <p className="font-medium text-gray-700">{formatDuration(route.durationMinutes)}</p>
+                                <p className="text-gray-400 text-xs text-right">Varighet</p>
+                                <p className="font-medium text-gray-700 text-right">{formatDuration(route.durationMinutes)}</p>
                             </div>
                         </div>
 
@@ -125,7 +123,7 @@ export default function Summary() {
 
                 <button
                     onClick={() => router.push("/")}
-                    className="w-full border border-gray-200 bg-white hover:bg-gray-50 text-gray-600 font-medium py-3 rounded-xl text-sm transition-colors"
+                    className="w-full border border-gray-400 bg-white hover:bg-[#FEBFBF] text-gray-600 font-medium py-3 rounded-xl text-sm transition-colors"
                 >
                     ← Søk etter ny reise
                 </button>

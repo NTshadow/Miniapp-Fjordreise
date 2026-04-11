@@ -51,12 +51,11 @@ export default function Home() {
     };
 
     return (
-        <main className="min-h-screen bg-gray-50">
-            <header className="bg-white border-b border-gray-100 px-4 py-4">
+        <main className="min-h-screen ">
                 <div className="max-w-3xl mx-auto text-center">
-                    <h1 className="text-2xl text-red-700 tracking-tight ">Fjordreise</h1>
+                    <h1 className="text-4xl pt-5 text-[#B91C1C] tracking-tight ">Fjordreise</h1>
                 </div>
-            </header>
+            
 
             <div className="max-w-2xl mx-auto px-4 py-6 flex flex-col gap-6">
                 <SearchForm onSearch={handleSearch} loading={loading}/>

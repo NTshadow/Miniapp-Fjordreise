@@ -43,7 +43,7 @@ export default function RouteCards({ route, selected, onSelect, searchDate }: Ro
                 <div className="text-2xl font-bold text-[#B93B27]">{route.priceNOK}kr</div>
                     <div
                         onClick={() => onSelect(route)}
-                        className={`mt-3 pt-1 border border-[#D96666] text-s font-bold text-center cursor-pointer py-1 rounded w-full
+                        className={`mt-3 pt-1 border border-[#D96666] text-s font-bold text-center cursor-pointer py-1 rounded w-full hover:bg-[#FEBFBF]
                             ${selected ? "bg-[#FEBFBF] text-black" : "text-black"
                             }`}
                     >

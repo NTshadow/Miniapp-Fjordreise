@@ -14,7 +14,21 @@ export default function RootLayout({
     return (
         <html lang="no">
             <body>
-                {children}
+                <div style={{
+                    minHeight: "100vh",
+                    backgroundImage: "url('/bakgrunnsbilde.jpg')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundAttachment: "scroll",
+                }}>
+                    <div style={{
+                        minHeight: "100vh",
+                        backdropFilter: "blur(4px)",
+                    }}>
+                        {children}
+                    </div>
+                </div>
             </body>
         </html>
     );
