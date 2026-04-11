@@ -2,7 +2,7 @@
 
 En Next.js webapplikasjon for å finne fjordline fergeavganger langs norskekysten, for oppgaven om å bygge en mini bookingapp til stillingen som Web utvikler!
 
-## for å komme i gang: 
+## For å komme i gang: 
 ```bash
 npm run dev
 ```
@@ -11,9 +11,9 @@ npm run dev
 
 ---
 
-## valg og begrunnelser 
+## Valg og begrunnelser 
 
-### valg av verktøy 
+### Valg av verktøy 
 
 Backend er implementert med Next.js API Routes, som gjør at frontend og backend ligger i samme prosjekt.
 
