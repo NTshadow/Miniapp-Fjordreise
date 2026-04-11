@@ -6,9 +6,10 @@ type ResultsProps = {
   selectedId: string | null;
   onSelectRoute: (route: Route) => void;
   searched: boolean;
+  searchDate: string;
 };
 
-export default function Results({ routes, selectedId, onSelectRoute, searched }: ResultsProps ) {
+export default function Results({ routes, selectedId, onSelectRoute, searched, searchDate }: ResultsProps ) {
     if (!searched) return null;
 
     if (routes.length === 0) {
@@ -32,6 +33,7 @@ export default function Results({ routes, selectedId, onSelectRoute, searched }:
                 route={route} 
                 selected={selectedId == route.id} 
                 onSelect={onSelectRoute} 
+                searchDate={searchDate}
                 />
             ))}
         </div>

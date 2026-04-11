@@ -7,7 +7,7 @@
     "departure": "07:00",
     "arrival": "23:00",
     "durationMinutes": 960,
-    "priceNOK": 799,
+    "priceNOK": 1199,
     "operator": "Fjord Line"
   },
   {
@@ -16,9 +16,9 @@
     "to": "Hirtshals",
     "schedule": ["weekday", "weekend"],
     "departure": "12:00",
-    "arrival": "04:00+1",
+    "arrival": "04:00",
     "durationMinutes": 960,
-    "priceNOK": 899,
+    "priceNOK": 999,
     "operator": "Fjord Line"
   },
   {
@@ -29,7 +29,7 @@
     "departure": "17:00",
     "arrival": "09:00",
     "durationMinutes": 960,
-    "priceNOK": 999,
+    "priceNOK": 799,
     "operator": "Fjord Line"
   },
   {
@@ -38,9 +38,9 @@
     "to": "Hirtshals",
     "schedule": ["weekend"],
     "departure": "22:00",
-    "arrival": "14:00+1",
+    "arrival": "14:00",
     "durationMinutes": 960,
-    "priceNOK": 1199,
+    "priceNOK": 599,
     "operator": "Fjord Line"
   },
   {
@@ -49,9 +49,9 @@
     "to": "Bergen",
     "schedule": ["weekday"],
     "departure": "08:00",
-    "arrival": "00:00+1",
+    "arrival": "00:00",
     "durationMinutes": 960,
-    "priceNOK": 799,
+    "priceNOK": 1199,
     "operator": "Fjord Line"
   },
   {
@@ -60,9 +60,9 @@
     "to": "Bergen",
     "schedule": ["weekday", "weekend"],
     "departure": "13:00",
-    "arrival": "05:00+1",
+    "arrival": "05:00",
     "durationMinutes": 960,
-    "priceNOK": 899,
+    "priceNOK": 999,
     "operator": "Fjord Line"
   },
   {
@@ -71,7 +71,7 @@
     "to": "Bergen",
     "schedule": ["weekday", "weekend"],
     "departure": "18:00",
-    "arrival": "10:00+1", 
+    "arrival": "10:00", 
     "durationMinutes": 960,
     "priceNOK": 999,
     "operator": "Fjord Line"
@@ -82,7 +82,7 @@
     "to": "Bergen",
     "schedule": ["weekend"],
     "departure": "23:00",
-    "arrival": "15:00+1",
+    "arrival": "15:00",
     "durationMinutes": 960,
     "priceNOK": 1199,
     "operator": "Fjord Line"
@@ -126,7 +126,7 @@
     "to": "Stavanger",
     "schedule": ["weekend"],
     "departure": "22:00",
-    "arrival": "02:30+1",
+    "arrival": "02:30",
     "durationMinutes": 270,
     "priceNOK": 599,
     "operator": "Fjord Line"
@@ -170,7 +170,7 @@
     "to": "Bergen",
     "schedule": ["weekend"],
     "departure": "23:00",
-    "arrival": "03:30+1",
+    "arrival": "03:30",
     "durationMinutes": 270,
     "priceNOK": 599,
     "operator": "Fjord Line"

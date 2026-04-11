@@ -14,8 +14,10 @@ export default function Home() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);    
     const [searched, setSearched] = useState(false);
+    const [date, setDate] = useState<string>("");
 
     const handleSearch = async (from: string, to: string, date: string) => {
+        setDate(date);
         setLoading(true);
         setError(null);
         setSelected(null);
@@ -69,6 +71,7 @@ export default function Home() {
                     selectedId={selected?.id || null}
                     onSelectRoute={setSelected}
                     searched={searched}
+                    searchDate={date}
                 />
 
                 {selected && (

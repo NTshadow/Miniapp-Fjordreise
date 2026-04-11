@@ -1,13 +1,17 @@
 import type { Route } from "../api/routes/route";
-import { formatDuration } from "../utils/formatDuration";
+import { formatDuration, getArrivalDate } from "../utils/formatDuration";
 
 type RouteCardsProps = {
   route: Route;
   selected: boolean;
   onSelect: (route: Route) => void;
+  searchDate: string;
 };  
 
-export default function RouteCards({ route, selected, onSelect }: RouteCardsProps) {   
+export default function RouteCards({ route, selected, onSelect, searchDate }: RouteCardsProps) {   
+
+    const arrivalDate = getArrivalDate(searchDate, route.departure, route.arrival);
+
     return (
         <div
         onClick={() => onSelect(route)}
@@ -20,7 +24,14 @@ export default function RouteCards({ route, selected, onSelect }: RouteCardsProp
             <div className="flex items-center gap-3 min-w-0">
                 <div className="text-center">
                     <div className="text-xs text-gray-400">{route.from} {"-"} {route.to}</div>
-                    <div className="text-xl font-bold text-gray-900">{route.departure} {"-"} {route.arrival}</div>
+                        <div className="text-xl font-bold text-gray-900">
+                            {route.departure} {"-"} {route.arrival}
+                            {arrivalDate && (
+                                <span className="text-xs text-gray-400 font-normal ml-1">
+                                    +1 ({arrivalDate})
+                                </span>
+                            )}
+                        </div>
                 </div>
                 
                 <div className="flex flex-col items-center gap-0.5 px-2">
