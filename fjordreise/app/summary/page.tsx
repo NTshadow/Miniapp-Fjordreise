@@ -1,6 +1,9 @@
-import { useRouter } from "next/router";
-import type { Route } from "./api/routes/route";    
-import { formatDuration } from "./utils/formatDuration";
+"use client";
+
+import { useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+import type { Route } from "../api/routes/route";    
+import { formatDuration } from "../utils/formatDuration";
 
 function formatDate(dateString: string): string {
   const date = new Date(dateString);
@@ -13,8 +16,10 @@ function formatDate(dateString: string): string {
 }
 
 export default function Summary() {
-    const router = useRouter(); 
-    const { data, date } = router.query;
+    const router = useRouter();
+    const searchParams = useSearchParams();
+    const data = searchParams.get("data");
+    const date = searchParams.get("date");
 
     if (!data ) {
         return (
