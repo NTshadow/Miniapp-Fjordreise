@@ -1,6 +1,8 @@
+"use client";
+
 import { useState } from "react";
-import { useRouter } from "next/router";
-import type { Route } from "./api/route";
+import { useRouter } from "next/navigation";
+import type { Route } from "./api/routes/route";
 import SearchForm from "./components/searchForms";
 import Results from "./components/results"; 
 
@@ -23,7 +25,7 @@ export default function Home() {
         try {
             const params = new URLSearchParams({ from, to, date });
             const res = await fetch(
-                `/api/routes/route?${params}`
+                `/api/routes?${params}`
             );
 
             if (!res.ok) {
@@ -42,10 +44,8 @@ export default function Home() {
 
     const handleCountinue = () => {
         if (!selected) return;
-        router.push({
-            pathname: "/summary",
-            query: { id: selected.id, data: JSON.stringify(selected) },
-        });
+        const params = new URLSearchParams({ id: selected.id, data: JSON.stringify(selected) });
+        router.push(`/summary?${params}`);
     };
 
     return (

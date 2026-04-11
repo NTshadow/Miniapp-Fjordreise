@@ -1,4 +1,4 @@
-import type { Route } from "../api/route";
+import type { Route } from "../api/routes/route";
 import { formatDuration } from "../utils/formatDuration";
 
 type RouteCardsProps = {
